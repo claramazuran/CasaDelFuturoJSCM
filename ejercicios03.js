@@ -132,21 +132,37 @@ function nValor(juan){
     //Juan tiene N dólares, David tiene la mitad de lo que posee Juan y José la mitad de lo que poseen Juan y David juntos.
     //Retornar el promedio de la cantidad de dinero que tienen entre los tres y redondear hacia arriba
     //Tu código:👇
-
+    let valorJuan = juan;
+    let valorDavid = valorJuan/2;
+    let valorJose = (valorJuan + valorDavid) / 2;
+    
+    let promedio = (valorJuan + valorDavid + valorJose) / 3 
+    
+    return Math.ceil(promedio)
 }
 
 function numMúltiplo(num1, num2){
     //Comprueba si num1 y num2 son múltiplos entre si, en caso de serlos retorna "Son múltiplos",
     //caso contrario retornar "No son múltiplos"
     //Tu código:👇
+    let multiplo = num1%num2;
 
+    if (multiplo == 0) {
+
+        return "Son múltiplos"
+        
+    } 
+    return "No son múltiplos"
 }
 
 function length(str){
     // Comprueba si 'str' tiene un longitud mayor que 5, de ser así tienes que retornar true
     // caso contrario retornar false.
     // Tu código:👇
-
+if (str.length > 5) {
+    return true
+}
+return false
 }
 
 module.exports = {
